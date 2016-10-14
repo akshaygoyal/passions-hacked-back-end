@@ -1,0 +1,3 @@
+beach,https://passions-hacked.herokuapp.com/beach.jpeg
+surf,https://passions-hacked.herokuapp.com/surf.jpeg
+golf,https://passions-hacked.herokuapp.com/golf.jpeg
