@@ -1,4 +1,4 @@
-beer,beer,https://passions-hacked.herokuapp.com/beer.jpeg
+beer,Beer,https://passions-hacked.herokuapp.com/beer.jpeg
 horseriding,Horse Riding,https://passions-hacked.herokuapp.com/horseriding.jpeg
 concerts,Concerts,https://passions-hacked.herokuapp.com/concerts.jpeg
 fishing,Fishing,https://passions-hacked.herokuapp.com/fishing.jpeg
