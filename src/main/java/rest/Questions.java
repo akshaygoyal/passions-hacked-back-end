@@ -8,8 +8,9 @@ import java.util.Scanner;
 import com.google.gson.Gson;
 import data.Card;
 import data.Deck;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,8 +18,8 @@ public class Questions {
 
   private List<Card> cards;
 
-  @RequestMapping("/questions/{state}")
-  public String getNextSetOfQuestions(@PathVariable("state") String state) {
+  @RequestMapping(path = "/questions", method = RequestMethod.POST)
+  public String getNextSetOfQuestions(@RequestBody final String state) {
 
     Deck deck = new Deck();
 
@@ -41,8 +42,9 @@ public class Questions {
       String[] line = scanner.nextLine().split(",");
       Card card = new Card();
       card.setId(i);
-      card.setDesc(line[0]);
-      card.setImage_url(line[1]);
+      card.setTerm(line[0]);
+      card.setDesc(line[1]);
+      card.setImageUrl(line[2]);
       cards.add(card);
       i++;
     }

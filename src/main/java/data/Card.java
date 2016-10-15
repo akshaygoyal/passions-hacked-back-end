@@ -4,7 +4,8 @@ public class Card {
 
   int id;
   String desc;
-  String image_url;
+  String term;
+  String imageUrl;
 
   public int getId() {
     return id;
@@ -22,11 +23,19 @@ public class Card {
     this.desc = desc;
   }
 
-  public String getImage_url() {
-    return image_url;
+  public String getImageUrl() {
+    return imageUrl;
   }
 
-  public void setImage_url(String image_url) {
-    this.image_url = image_url;
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
+  public String getTerm() {
+    return term;
+  }
+
+  public void setTerm(String term) {
+    this.term = term;
   }
 }
