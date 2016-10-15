@@ -1,0 +1,3 @@
+amsterdam,Amsterdam,https://passions-hacked.herokuapp.com/amsterdam.jpeg
+dubai,Dubai,https://passions-hacked.herokuapp.com/dubai.jpeg
+sydney,Sydney,https://passions-hacked.herokuapp.com/sydney.jpeg

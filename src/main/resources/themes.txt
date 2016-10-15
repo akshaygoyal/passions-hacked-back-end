@@ -5,3 +5,4 @@ adventure,Adventure Sports,https://passions-hacked.herokuapp.com/adventure.jpeg
 shopping,Shopping,https://passions-hacked.herokuapp.com/shopping.jpeg
 wildlife,Wildlife,https://passions-hacked.herokuapp.com/wildlife.jpeg
 backpacking,Backpacking,https://passions-hacked.herokuapp.com/backpacking.jpeg
+museums,Museums,https://passions-hacked.herokuapp.com/museums.jpeg

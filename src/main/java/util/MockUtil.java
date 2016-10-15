@@ -13,9 +13,25 @@ import data.Hotels;
 public class MockUtil {
 
 
-  public static List<Card> getCards() {
+  public static List<Card> getThemes() {
+    return getCards("themes.txt");
+  }
+
+  public static List<Card> getTravelOptions() {
+    return getCards("travel.txt");
+  }
+
+  public static List<Card> getActivities() {
+    return getCards("activities.txt");
+  }
+
+  public static List<Card> getLocations() {
+    return getCards("locations.txt");
+  }
+
+  public static List<Card> getCards(String file) {
     ClassLoader classLoader = MockUtil.class.getClassLoader();
-    InputStream stream = classLoader.getResourceAsStream("themes.txt");
+    InputStream stream = classLoader.getResourceAsStream(file);
 
     int i = 0;
     List<Card> cards = new ArrayList<Card>();
@@ -63,7 +79,6 @@ public class MockUtil {
 
     Hotels hotels = new Hotels(hotelList);
     return hotels;
-
-
   }
+
 }
