@@ -1,0 +1,3 @@
+plane,By Plane,https://passions-hacked.herokuapp.com/plain.jpeg
+train,By Train,https://passions-hacked.herokuapp.com/train.jpeg
+car,By Car,https://passions-hacked.herokuapp.com/car.jpeg

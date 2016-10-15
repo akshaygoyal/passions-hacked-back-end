@@ -13,9 +13,12 @@ public class Hotel {
   private String thumbnailUrl;
   private String name;
   private String location;
+  private String desc;
+  private String address;
+  private String number;
 
 
-  public Hotel(int price, double rating, int stars, List<String> nearByAttractions, List<String> reviews, List<String> imageUrls, String thumbnailUrl, String name, String location) {
+  public Hotel(int price, double rating, int stars, List<String> nearByAttractions, List<String> reviews, List<String> imageUrls, String thumbnailUrl, String name, String location, String desc, String address, String number) {
     this.price = price;
     this.rating = rating;
     this.stars = stars;
@@ -23,6 +26,11 @@ public class Hotel {
     this.reviews = reviews;
     this.imageUrls = imageUrls;
     this.thumbnailUrl = thumbnailUrl;
+    this.name = name;
+    this.location = location;
+    this.desc = desc;
+    this.address = address;
+    this.number = number;
   }
 
   public int getPrice() {
@@ -97,5 +105,28 @@ public class Hotel {
     this.location = location;
   }
 
+  public String getDesc() {
+    return desc;
+  }
+
+  public void setDesc(String desc) {
+    this.desc = desc;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getNumber() {
+    return number;
+  }
+
+  public void setNumber(String number) {
+    this.number = number;
+  }
 }
 

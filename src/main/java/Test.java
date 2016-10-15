@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import data.Card;
+import util.MockUtil;
 
 public class Test {
 
@@ -24,5 +25,7 @@ public class Test {
 //    } catch (FileNotFoundException e) {
 //      e.printStackTrace();
 //    }
+//
+//    MockUtil.getHotels();
 //  }
 }

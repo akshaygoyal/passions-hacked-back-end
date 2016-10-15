@@ -1,3 +1,7 @@
 beach,Beach Side,https://passions-hacked.herokuapp.com/beach.jpeg
 surf,Surfing/Water Sports,https://passions-hacked.herokuapp.com/surf.jpeg
 golf,Golf,https://passions-hacked.herokuapp.com/golf.jpeg
+adventure,Adventure Sports,https://passions-hacked.herokuapp.com/adventure.jpeg
+shopping,Shopping,https://passions-hacked.herokuapp.com/shopping.jpeg
+wildlife,Wildlife,https://passions-hacked.herokuapp.com/wildlife.jpeg
+backpacking,Backpacking,https://passions-hacked.herokuapp.com/backpacking.jpeg
