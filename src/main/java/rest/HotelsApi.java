@@ -9,6 +9,7 @@ import java.net.ProtocolException;
 import java.net.URL;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +27,7 @@ public class HotelsApi {
   public String getListOfHotels(@RequestBody final String state) {
 
     URL getHotelsUrl = null;
-    JsonObject jo = null;
+    JsonElement jo = null;
     String data = "";
     try {
 
@@ -46,10 +47,10 @@ public class HotelsApi {
       }
 
       JsonParser parser = new JsonParser();
-      jo = (JsonObject) parser.parse(result.toString());
+      jo = parser.parse(result.toString());
       System.out.println(jo.getAsJsonArray().toString());
 
-      System.out.println(jo.get("hotel_id"));
+//      System.out.println(jo.get("hotel_id"));
 
     } catch (MalformedURLException e) {
       e.printStackTrace();
@@ -60,7 +61,7 @@ public class HotelsApi {
     }
 
 
-//    String json = (new Gson()).toJson(MockUtil.getHotels());
+    String json = (new Gson()).toJson(MockUtil.getHotels());
     return jo.getAsJsonArray().toString();
 
 
