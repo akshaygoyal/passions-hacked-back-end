@@ -26,43 +26,47 @@ public class HotelsApi {
   @RequestMapping(path = "/hotels", method = RequestMethod.POST)
   public String getListOfHotels(@RequestBody final String state) {
 
-    URL getHotelsUrl = null;
-    JsonElement jo = null;
-    String data = "";
-    try {
-
-      getHotelsUrl = new URL(baseUrl + "getHotels?city_ids=-2140479");
-      HttpURLConnection conn = (HttpURLConnection) getHotelsUrl.openConnection();
-      conn.setRequestMethod("GET");
-      conn.setRequestProperty("Accept", "application/json");
-      conn.setRequestProperty("Authorization", "Basic aGFja2VyMjQwOjZQSmZ5UUZMbjQ=");
-
-      StringBuilder result = new StringBuilder();
-      if(conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-        String line;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        while ((line = reader.readLine()) != null) {
-          result.append(line);
-        }
-      }
-
-      JsonParser parser = new JsonParser();
-      jo = parser.parse(result.toString());
-      System.out.println(jo.getAsJsonArray().toString());
-
-//      System.out.println(jo.get("hotel_id"));
-
-    } catch (MalformedURLException e) {
-      e.printStackTrace();
-    } catch (ProtocolException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+//    URL getHotelsUrl = null;
+//    JsonElement jo = null;
+//    String data = "";
+//    try {
+//
+//      getHotelsUrl = new URL(baseUrl + "getHotels?city_ids=-2140479");
+//      HttpURLConnection conn = (HttpURLConnection) getHotelsUrl.openConnection();
+//      conn.setRequestMethod("GET");
+//      conn.setRequestProperty("Accept", "application/json");
+//      conn.setRequestProperty("Authorization", "Basic aGFja2VyMjQwOjZQSmZ5UUZMbjQ=");
+//
+//      StringBuilder result = new StringBuilder();
+//      if(conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+//        String line;
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//        while ((line = reader.readLine()) != null) {
+//          result.append(line);
+//        }
+//      }
+//
+//      JsonParser parser = new JsonParser();
+//      jo = parser.parse(result.toString());
+////      System.out.println(jo.getAsJsonArray().toString());
+//
+////      System.out.println(jo.get("hotel_id"));
+//      for(JsonElement j : jo.getAsJsonArray()) {
+//        String hotelId = j.getAsJsonObject().get("hotel_id").toString();
+//
+//      }
+//
+//    } catch (MalformedURLException e) {
+//      e.printStackTrace();
+//    } catch (ProtocolException e) {
+//      e.printStackTrace();
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//    }
 
 
     String json = (new Gson()).toJson(MockUtil.getHotels());
-    return jo.getAsJsonArray().toString();
+    return json;
 
 
   }
